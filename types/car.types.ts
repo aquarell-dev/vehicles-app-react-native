@@ -1,4 +1,4 @@
-export const vehicleTypes = ['Грузовая', 'Легковая', 'Спортивная'] as const
+export const vehicleTypes = ['Грузовые', 'Легковые', 'Специальные'] as const
 
 export type TVehicleType = keyof typeof vehicleTypes
 
@@ -8,7 +8,12 @@ export type TCar = {
 	carType: TVehicleType
 	photo: string
 	driver: string
-	city: string
+	location: {
+		locationString: string
+		latitude: number
+		longitude: number
+		marker: string
+	}
 }
 
-export type FilterCarsByType = (carType: TVehicleType) => void
+export type FilterCarsByType = (carType?: TVehicleType) => void
