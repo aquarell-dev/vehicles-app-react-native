@@ -1,28 +1,27 @@
 import { useMemo, useState } from 'react'
-import { FilterCarsByType, TCar, TVehicleType, vehicleTypes } from '../../../../../../types/car.types'
+import { FilterCarsByType, TCar } from '../../../../../../types/car.types'
 import vehicles from '../../../../../../vehicles.json'
+import TruckMarker from '../../../../../../assets/markers/truck.png'
+import CarMarker from '../../../../../../assets/markers/truck.png'
+import SpecialCarMarker from '../../../../../../assets/markers/truck.png'
 
 const useCars = () => {
-	const loadCars = () => {
-		const cars: TCar[] = vehicles.map(vehicle => (
-			{
-				carType: vehicleTypes[Math.floor(Math.random() * vehicleTypes.length)] as TVehicleType,
-				...vehicle
-			}
-		))
-		
-		return cars
-	}
+	const loadCars = () => vehicles.map(v => ({
+		...v,
+		location: {
+			...v.location,
+			marker: v.carType === 'Грузовые' ? TruckMarker : v.carType === 'Легковые' ? CarMarker : SpecialCarMarker
+		}
+	})) as TCar[]
 	
-	const [cars, setCars] = useState<TCar[]>(loadCars)
+	const [cars, setCars] = useState<TCar[]>(loadCars())
 	
 	const allCars = useMemo(() => loadCars(), [])
 	
 	const filterCarsByType: FilterCarsByType = carType => {
-		setCars(allCars.filter(car => car.carType === carType))
-	}
-	
-	const updateCarCoordinates = () => {
+		if (!carType) setCars(allCars)
+		
+		setCars(allCars.filter(car => car.carType === carType) as TCar[])
 	}
 	
 	return { cars, filterCarsByType }
