@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 import Button from '../../../../ui/Button/components/Button'
 import { Octicons } from '@expo/vector-icons'
 import { Text, View } from 'react-native'
@@ -25,4 +25,4 @@ const Header: FC = () => {
 	)
 }
 
-export default Header
+export default React.memo(Header)
