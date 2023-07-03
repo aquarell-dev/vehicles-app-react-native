@@ -4,7 +4,7 @@ import Button from '../Button'
 
 const PrimaryButton: FC<TButton> = ({ children, ...props }) => {
 	return (
-		<Button {...props} textStyle='bg-button-primary'>
+		<Button {...props} textStyle='bg-button-primary px-4 py-2'>
 			{children}
 		</Button>
 	)
