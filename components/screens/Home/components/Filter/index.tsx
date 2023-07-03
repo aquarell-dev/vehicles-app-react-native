@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import { FlatList, Text } from 'react-native'
 import { SecondaryButton } from '../../../../ui/Button'
-import { vehicleTypes } from '../../../../../types/car.types'
+import { FilterCarsByType, TVehicleType, vehicleTypes } from '../../../../../types/car.types'
 
-const Filter: FC = () => {
+const Filter: FC<{ filterCallback: FilterCarsByType }> = ({ filterCallback }) => {
 	return (
 		<FlatList
 			horizontal={true}
@@ -11,6 +11,7 @@ const Filter: FC = () => {
 			renderItem={(t =>
 					<SecondaryButton
 						key={t.index}
+						onPress={() => filterCallback(t.item as TVehicleType)}
 					>
 						<Text className='text-button-primary font-medium'>{t.item}</Text>
 					</SecondaryButton>
