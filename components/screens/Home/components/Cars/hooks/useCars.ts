@@ -1,19 +1,31 @@
-import { useEffect, useState } from 'react'
-import { TCar } from '../../../../../../types/car.types'
-import * as fs from 'fs'
+import { useMemo, useState } from 'react'
+import { FilterCarsByType, TCar, TVehicleType, vehicleTypes } from '../../../../../../types/car.types'
+import vehicles from '../../../../../../vehicles.json'
 
 const useCars = () => {
-	const [cars, setCars] = useState<TCar[]>([])
+	const loadCars = () => {
+		const cars: TCar[] = vehicles.map(vehicle => (
+			{
+				carType: vehicleTypes[Math.floor(Math.random() * vehicleTypes.length)] as TVehicleType,
+				...vehicle
+			}
+		))
+		
+		return cars
+	}
 	
-	useEffect(() => {
-		const jsonString = fs.readFileSync('../../../../../../vehicles.json', 'utf-8')
-		setCars(JSON.parse(jsonString))
-	}, [])
+	const [cars, setCars] = useState<TCar[]>(loadCars)
+	
+	const allCars = useMemo(() => loadCars(), [])
+	
+	const filterCarsByType: FilterCarsByType = carType => {
+		setCars(allCars.filter(car => car.carType === carType))
+	}
 	
 	const updateCarCoordinates = () => {
 	}
 	
-	return { cars }
+	return { cars, filterCarsByType }
 }
 
 export default useCars
