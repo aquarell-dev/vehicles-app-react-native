@@ -3,8 +3,12 @@ export const vehicleTypes = ['Грузовая', 'Легковая', 'Спорт
 export type TVehicleType = keyof typeof vehicleTypes
 
 export type TCar = {
+	id: number
 	title: string
 	carType: TVehicleType
 	photo: string
+	driver: string
 	city: string
 }
+
+export type FilterCarsByType = (carType: TVehicleType) => void
