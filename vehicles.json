@@ -1,0 +1,27 @@
+[
+  {
+    "title": "BMW V5",
+    "photo": "",
+    "city": "London"
+  },
+  {
+    "title": "Mercedes Benz Truck",
+    "photo": "",
+    "city": "Moscow"
+  },
+  {
+    "title": "Kia Rio",
+    "photo": "",
+    "city": "Denver"
+  },
+  {
+    "title": "Skoda Octavia",
+    "photo": "",
+    "city": "Helsinki"
+  },
+  {
+    "title": "Mitsubishi Pajero Sport",
+    "photo": "",
+    "city": "Oslo"
+  }
+]
