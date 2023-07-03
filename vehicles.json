@@ -1,27 +1,37 @@
 [
   {
+    "id": 1,
     "title": "BMW V5",
-    "photo": "",
-    "city": "London"
+    "photo": "https://cdn.kodixauto.ru/media/image/6010f2f38d2b4a0001a8849d",
+    "city": "London",
+    "driver": "Иванов И.И."
   },
   {
+    "id": 2,
     "title": "Mercedes Benz Truck",
-    "photo": "",
-    "city": "Moscow"
+    "photo": "https://www.daimlertruck.com/fileadmin/_processed_/1/5/csm_actros-fernverkehr-18c0490-050_6244d49814.jpg",
+    "city": "Moscow",
+    "driver": "Иванов И.И."
   },
   {
+    "id": 3,
     "title": "Kia Rio",
-    "photo": "",
-    "city": "Denver"
+    "photo": "https://hips.hearstapps.com/hmg-prod/images/19313-2023-rio-5-door-1676389973.jpg",
+    "city": "Denver",
+    "driver": "Иванов И.И."
   },
   {
+    "id": 4,
     "title": "Skoda Octavia",
-    "photo": "",
-    "city": "Helsinki"
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Skoda_Octavia_IV_liftback_%28cropped%29.jpg",
+    "city": "Helsinki",
+    "driver": "Иванов И.И."
   },
   {
+    "id": 5,
     "title": "Mitsubishi Pajero Sport",
-    "photo": "",
-    "city": "Oslo"
+    "photo": "https://www.tuningblog.eu/wp-content/uploads/2014/12/mitsubishi-pajero-sport-2014.jpg",
+    "city": "Oslo",
+    "driver": "Иванов И.И."
   }
 ]
