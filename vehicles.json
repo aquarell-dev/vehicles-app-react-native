@@ -2,36 +2,121 @@
   {
     "id": 1,
     "title": "BMW V5",
+    "carType": "Легковые",
+    "location": {
+      "locationString": "Moscow, Russia",
+      "latitude": 55.817807012323016,
+      "longitude": 37.65370451839734
+    },
     "photo": "https://cdn.kodixauto.ru/media/image/6010f2f38d2b4a0001a8849d",
-    "city": "London",
     "driver": "Иванов И.И."
   },
   {
     "id": 2,
     "title": "Mercedes Benz Truck",
+    "carType": "Грузовые",
+    "location": {
+      "locationString": "Moscow, Russia",
+      "latitude": 55.77137114412825,
+      "longitude": 37.619235993922764
+    },
     "photo": "https://www.daimlertruck.com/fileadmin/_processed_/1/5/csm_actros-fernverkehr-18c0490-050_6244d49814.jpg",
-    "city": "Moscow",
     "driver": "Иванов И.И."
   },
   {
     "id": 3,
     "title": "Kia Rio",
+    "carType": "Легковые",
+    "location": {
+      "locationString": "Moscow, Russia",
+      "latitude": 55.769378482367685,
+      "longitude": 37.55097587998098
+    },
     "photo": "https://hips.hearstapps.com/hmg-prod/images/19313-2023-rio-5-door-1676389973.jpg",
-    "city": "Denver",
     "driver": "Иванов И.И."
   },
   {
     "id": 4,
     "title": "Skoda Octavia",
+    "carType": "Легковые",
+    "location": {
+      "locationString": "Moscow, Russia",
+      "latitude": 55.79330596402707,
+      "longitude": 37.530921868772104
+    },
     "photo": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Skoda_Octavia_IV_liftback_%28cropped%29.jpg",
-    "city": "Helsinki",
     "driver": "Иванов И.И."
   },
   {
     "id": 5,
     "title": "Mitsubishi Pajero Sport",
+    "carType": "Легковые",
+    "location": {
+      "locationString": "Moscow, Russia",
+      "latitude": 55.73394270641418,
+      "longitude": 37.63675140313063
+    },
     "photo": "https://www.tuningblog.eu/wp-content/uploads/2014/12/mitsubishi-pajero-sport-2014.jpg",
-    "city": "Oslo",
+    "driver": "Иванов И.И."
+  },
+  {
+    "id": 6,
+    "title": "Камаз",
+    "carType": "Грузовые",
+    "location": {
+      "locationString": "Moscow, Russia",
+      "latitude": 55.712613450961044,
+      "longitude": 37.56068686692539
+    },
+    "photo": "https://www.autostat.ru/application/includes/blocks/big_photo/images/cache/000/092/715/7d7f818f-670-0.jpg",
+    "driver": "Иванов И.И."
+  },
+  {
+    "id": 7,
+    "title": "Газель",
+    "carType": "Грузовые",
+    "location": {
+      "locationString": "Moscow, Russia",
+      "latitude": 55.684293722008476,
+      "longitude": 37.62210662847131
+    },
+    "photo": "https://www.avtovzglyad.ru/media/article/AZZZZZ.jpg.740x555_q85_box-82%2C0%2C741%2C495_crop_detail_upscale.jpg",
+    "driver": "Иванов И.И."
+  },
+  {
+    "id": 8,
+    "title": "Полицейская Машина",
+    "carType": "Специальные",
+    "location": {
+      "locationString": "Moscow, Russia",
+      "latitude": 55.740196163951346,
+      "longitude": 37.548368660222984
+    },
+    "photo": "https://dic.academic.ru/pictures/wiki/files/82/Russian_Police_car_Tver.jpg",
+    "driver": "Иванов И.И."
+  },
+  {
+    "id": 9,
+    "title": "Iveco",
+    "carType": "Специальные",
+    "location": {
+      "locationString": "Moscow, Russia",
+      "latitude": 55.78100751525643,
+      "longitude": 37.60134287663921
+    },
+    "photo": "https://images.techinsider.ru/upload/img_cache/79f/79f393a91234d67dc2833a2ed3809946_ce_1920x1280x0x0.jpg",
+    "driver": "Иванов И.И."
+  },
+  {
+    "id": 10,
+    "title": "Трактор МТЗ",
+    "carType": "Специальные",
+    "location": {
+      "locationString": "Moscow, Russia",
+      "latitude": 55.77138172079102,
+      "longitude": 37.595909623966854
+    },
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Massey_Ferguson_6490_Dynashift.jpg/1200px-Massey_Ferguson_6490_Dynashift.jpg",
     "driver": "Иванов И.И."
   }
 ]
