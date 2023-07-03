@@ -5,19 +5,28 @@ import { FilterCarsByType, TVehicleType, vehicleTypes } from '../../../../../typ
 
 const Filter: FC<{ filterCallback: FilterCarsByType }> = ({ filterCallback }) => {
 	return (
-		<FlatList
-			horizontal={true}
-			data={vehicleTypes}
-			renderItem={(t =>
-					<SecondaryButton
-						key={t.index}
-						onPress={() => filterCallback(t.item as TVehicleType)}
-					>
-						<Text className='text-button-primary font-medium'>{t.item}</Text>
-					</SecondaryButton>
-			)}
-			contentContainerStyle={{ flex: 1, justifyContent: 'space-around', alignItems: 'stretch' }}
-		/>
+		<>
+			<FlatList
+				horizontal={true}
+				className='mb-2'
+				style={{
+					minHeight: 40
+				}}
+				data={vehicleTypes}
+				renderItem={(t =>
+						<SecondaryButton
+							key={t.index}
+							onPress={() => filterCallback(t.item as TVehicleType)}
+						>
+							<Text className='text-button-primary font-medium'>{t.item}</Text>
+						</SecondaryButton>
+				)}
+				contentContainerStyle={{ flex: 1, justifyContent: 'space-around', alignItems: 'stretch' }}
+			/>
+			<SecondaryButton onPress={() => filterCallback()}>
+				<Text className='text-button-primary font-medium'>Убрать Фильтр</Text>
+			</SecondaryButton>
+		</>
 	)
 }
 
