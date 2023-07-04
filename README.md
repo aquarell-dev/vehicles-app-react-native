@@ -6,7 +6,7 @@ Just an example of an app built with React Native
 
 - Localization
 - Native Map
-- Store
+- Optimized Lists
 
 ## Design Inspiration
 
