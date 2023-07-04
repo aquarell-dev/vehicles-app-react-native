@@ -1,4 +1,4 @@
-import { FlatList, Text } from 'react-native'
+import { Text, View } from 'react-native'
 import { FC, useState } from 'react'
 import useCars from './hooks/useCars'
 import Car from '../Car'
@@ -6,22 +6,35 @@ import Filter from '../Filter'
 import ViewSwitch from '../ViewSwitch'
 import { ViewMode } from '../../mode.types'
 import CarsMap from '../CarsMap'
+import Search from '../Search'
+import { FlashList } from '@shopify/flash-list'
 
 const Cars: FC = () => {
-	const { cars, filterCarsByType } = useCars()
+	const {
+		cars,
+		filterCarsByType,
+		carsQuery,
+		setCarsQuery
+	} = useCars()
 	
 	const [viewMode, setViewMode] = useState<ViewMode>('list')
 	
 	return <>
+		<Search query={carsQuery} setQuery={setCarsQuery} />
 		<Filter filterCallback={filterCarsByType} />
 		<ViewSwitch viewMode={viewMode} setViewMode={setViewMode} />
 		{viewMode === 'list' ? (
 			<>
 				<Text className='mb-3 text-2xl font-medium px-4'>Your Cars</Text>
-				<FlatList
-					data={cars}
-					renderItem={(({ item, index }) => <Car key={index} {...item} />)}
-				/>
+				<View style={{ height: 210 }}>
+					<FlashList
+						data={cars}
+						renderItem={(({ item }) => <Car key={item.id} {...item} />)}
+						removeClippedSubviews={true}
+						keyExtractor={item => item.id.toString()}
+						estimatedItemSize={167}
+					/>
+				</View>
 			</>
 		) : <CarsMap cars={cars} />
 		}
