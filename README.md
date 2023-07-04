@@ -7,6 +7,7 @@ Just an example of an app built with React Native
 - Localization
 - Native Map
 - Optimized Lists
+- Deep Links
 
 ## Design Inspiration
 
