@@ -1,10 +1,31 @@
-import { FC } from 'react'
+import { FC, useCallback } from 'react'
 import { Linking, Text, View } from 'react-native'
 import CarProperty from '../CarProperty'
 import { FontAwesome, FontAwesome5 } from '@expo/vector-icons'
 import { PrimaryButton, SecondaryButton } from '../../../../ui/Button'
+import { TDriver } from '../../../../../types/car.types'
+import { useToast } from 'react-native-toast-notifications'
 
-const AboutCar: FC<{ title: string, carType: string, driver: string }> = props => {
+const whatsappMessage = 'Добрый день, подскажите пожалуйста, какой номер заказа у вас сейчас в работе'
+
+const AboutCar: FC<{ title: string, carType: string, driver: TDriver }> = props => {
+	const toast = useToast()
+	
+	const openWhatsAppDeepLink = useCallback(() => Linking.openURL(
+		`whatsapp://send?phone=${props.driver.phone.replaceAll('+', '')}&text=${whatsappMessage}`
+	)
+		.then(() => console.log('success'))
+		.catch(e => toast.show(
+			'Произошла Ошибка',
+			{
+				type: 'warning',
+				placement: 'top',
+				duration: 1500,
+				animationType: 'slide-in'
+			}
+		)), [])
+	
+	
 	return (
 		<View className='mt-2 mb-4'>
 			<Text className='text-xl text-center font-semibold'>{props.title}</Text>
@@ -16,13 +37,13 @@ const AboutCar: FC<{ title: string, carType: string, driver: string }> = props =
 				/>
 				<CarProperty
 					icon={<FontAwesome name='drivers-license' size={20} color='black' />}
-					text={props.driver}
+					text={props.driver.name}
 					style={{ marginLeft: 5 }}
 				/>
 			</View>
 			<CarProperty
-				icon={<FontAwesome name='drivers-license' size={20} color='black' />}
-				text={props.driver}
+				icon={<FontAwesome name='mobile-phone' size={20} color='black' />}
+				text={props.driver.phone}
 				style={{
 					display: 'flex',
 					justifyContent: 'center',
@@ -33,7 +54,7 @@ const AboutCar: FC<{ title: string, carType: string, driver: string }> = props =
 				<PrimaryButton onPress={() => Linking.openURL('tel:+12345')}>
 					<Text className='text-white font-medium'>Позвонить</Text>
 				</PrimaryButton>
-				<SecondaryButton onPress={() => Linking.openURL('https://wa.me/15551234567')}>
+				<SecondaryButton onPress={openWhatsAppDeepLink}>
 					<Text className='text-'>Написать</Text>
 				</SecondaryButton>
 			</View>
