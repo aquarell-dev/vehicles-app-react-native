@@ -24,7 +24,7 @@ const Filter: FC<{ filterCallback: FilterCarsByType }> = ({ filterCallback }) =>
 				contentContainerStyle={{ flex: 1, justifyContent: 'space-around', alignItems: 'stretch' }}
 			/>
 			<SecondaryButton onPress={() => filterCallback()}>
-				<Text className='text-button-primary font-medium'>Убрать Фильтр</Text>
+				<Text className='text-button-primary font-medium'>Убрать Все Фильтры</Text>
 			</SecondaryButton>
 		</>
 	)

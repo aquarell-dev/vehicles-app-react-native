@@ -17,3 +17,4 @@ export type TCar = {
 }
 
 export type FilterCarsByType = (carType?: TVehicleType) => void
+export type FilterCarsByTitle = (title: string) => void
