@@ -9,7 +9,10 @@
       "longitude": 37.65370451839734
     },
     "photo": "https://cdn.kodixauto.ru/media/image/6010f2f38d2b4a0001a8849d",
-    "driver": "Иванов И.И."
+    "driver": {
+      "name": "Иванов И.И.",
+      "phone": "+1234678901"
+    }
   },
   {
     "id": 2,
@@ -21,7 +24,10 @@
       "longitude": 37.619235993922764
     },
     "photo": "https://www.daimlertruck.com/fileadmin/_processed_/1/5/csm_actros-fernverkehr-18c0490-050_6244d49814.jpg",
-    "driver": "Иванов И.И."
+    "driver": {
+      "name": "Иванов И.И.",
+      "phone": "+1234678901"
+    }
   },
   {
     "id": 3,
@@ -33,7 +39,10 @@
       "longitude": 37.55097587998098
     },
     "photo": "https://hips.hearstapps.com/hmg-prod/images/19313-2023-rio-5-door-1676389973.jpg",
-    "driver": "Иванов И.И."
+    "driver": {
+      "name": "Иванов И.И.",
+      "phone": "+1234678901"
+    }
   },
   {
     "id": 4,
@@ -45,7 +54,10 @@
       "longitude": 37.530921868772104
     },
     "photo": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Skoda_Octavia_IV_liftback_%28cropped%29.jpg",
-    "driver": "Иванов И.И."
+    "driver": {
+      "name": "Иванов И.И.",
+      "phone": "+1234678901"
+    }
   },
   {
     "id": 5,
@@ -57,7 +69,10 @@
       "longitude": 37.63675140313063
     },
     "photo": "https://www.tuningblog.eu/wp-content/uploads/2014/12/mitsubishi-pajero-sport-2014.jpg",
-    "driver": "Иванов И.И."
+    "driver": {
+      "name": "Иванов И.И.",
+      "phone": "+1234678901"
+    }
   },
   {
     "id": 6,
@@ -69,7 +84,10 @@
       "longitude": 37.56068686692539
     },
     "photo": "https://www.autostat.ru/application/includes/blocks/big_photo/images/cache/000/092/715/7d7f818f-670-0.jpg",
-    "driver": "Иванов И.И."
+    "driver": {
+      "name": "Иванов И.И.",
+      "phone": "+1234678901"
+    }
   },
   {
     "id": 7,
@@ -81,7 +99,10 @@
       "longitude": 37.62210662847131
     },
     "photo": "https://www.avtovzglyad.ru/media/article/AZZZZZ.jpg.740x555_q85_box-82%2C0%2C741%2C495_crop_detail_upscale.jpg",
-    "driver": "Иванов И.И."
+    "driver": {
+      "name": "Иванов И.И.",
+      "phone": "+1234678901"
+    }
   },
   {
     "id": 8,
@@ -93,7 +114,10 @@
       "longitude": 37.548368660222984
     },
     "photo": "https://dic.academic.ru/pictures/wiki/files/82/Russian_Police_car_Tver.jpg",
-    "driver": "Иванов И.И."
+    "driver": {
+      "name": "Иванов И.И.",
+      "phone": "+1234678901"
+    }
   },
   {
     "id": 9,
@@ -105,7 +129,10 @@
       "longitude": 37.60134287663921
     },
     "photo": "https://images.techinsider.ru/upload/img_cache/79f/79f393a91234d67dc2833a2ed3809946_ce_1920x1280x0x0.jpg",
-    "driver": "Иванов И.И."
+    "driver": {
+      "name": "Иванов И.И.",
+      "phone": "+1234678901"
+    }
   },
   {
     "id": 10,
@@ -117,6 +144,9 @@
       "longitude": 37.595909623966854
     },
     "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Massey_Ferguson_6490_Dynashift.jpg/1200px-Massey_Ferguson_6490_Dynashift.jpg",
-    "driver": "Иванов И.И."
+    "driver": {
+      "name": "Иванов И.И.",
+      "phone": "+1234678901"
+    }
   }
 ]
