@@ -1,0 +1,27 @@
+{
+  "home": {
+    "header": {
+      "underline": "Keep track",
+      "default": "of your drivers",
+      "bold": "in real-time"
+    },
+    "search": "Search a car...",
+    "clearFilter": "Clear All Filters",
+    "viewSwitch": {
+      "list": "List",
+      "map": "Map"
+    },
+    "cars": "Your Cars",
+    "car": {
+      "more": "More"
+    }
+  },
+  "car": {
+    "call": "Call",
+    "message": "Message"
+  },
+  "sidebar": {
+    "home": "Home",
+    "settings": "Settings"
+  }
+}

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "BMW V5",
-    "carType": "Легковые",
+    "carType": "Passenger",
     "location": {
       "locationString": "Moscow, Russia",
       "latitude": 55.817807012323016,
@@ -10,14 +10,14 @@
     },
     "photo": "https://cdn.kodixauto.ru/media/image/6010f2f38d2b4a0001a8849d",
     "driver": {
-      "name": "Иванов И.И.",
-      "phone": "+1234678901"
+      "name": "Bon Jovi",
+      "phone": "+790003007858"
     }
   },
   {
     "id": 2,
-    "title": "Mercedes Benz Truck",
-    "carType": "Грузовые",
+    "title": "Mercedes Benz",
+    "carType": "Truck",
     "location": {
       "locationString": "Moscow, Russia",
       "latitude": 55.77137114412825,
@@ -25,14 +25,14 @@
     },
     "photo": "https://www.daimlertruck.com/fileadmin/_processed_/1/5/csm_actros-fernverkehr-18c0490-050_6244d49814.jpg",
     "driver": {
-      "name": "Иванов И.И.",
-      "phone": "+1234678901"
+      "name": "Bon Jovi",
+      "phone": "+790003007858"
     }
   },
   {
     "id": 3,
     "title": "Kia Rio",
-    "carType": "Легковые",
+    "carType": "Passenger",
     "location": {
       "locationString": "Moscow, Russia",
       "latitude": 55.769378482367685,
@@ -40,14 +40,14 @@
     },
     "photo": "https://hips.hearstapps.com/hmg-prod/images/19313-2023-rio-5-door-1676389973.jpg",
     "driver": {
-      "name": "Иванов И.И.",
-      "phone": "+1234678901"
+      "name": "Bon Jovi",
+      "phone": "+790003007858"
     }
   },
   {
     "id": 4,
     "title": "Skoda Octavia",
-    "carType": "Легковые",
+    "carType": "Passenger",
     "location": {
       "locationString": "Moscow, Russia",
       "latitude": 55.79330596402707,
@@ -55,14 +55,14 @@
     },
     "photo": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Skoda_Octavia_IV_liftback_%28cropped%29.jpg",
     "driver": {
-      "name": "Иванов И.И.",
-      "phone": "+1234678901"
+      "name": "Bon Jovi",
+      "phone": "+790003007858"
     }
   },
   {
     "id": 5,
-    "title": "Mitsubishi Pajero Sport",
-    "carType": "Легковые",
+    "title": "Mitsubishi Pajero",
+    "carType": "Passenger",
     "location": {
       "locationString": "Moscow, Russia",
       "latitude": 55.73394270641418,
@@ -70,14 +70,14 @@
     },
     "photo": "https://www.tuningblog.eu/wp-content/uploads/2014/12/mitsubishi-pajero-sport-2014.jpg",
     "driver": {
-      "name": "Иванов И.И.",
-      "phone": "+1234678901"
+      "name": "Bon Jovi",
+      "phone": "+790003007858"
     }
   },
   {
     "id": 6,
-    "title": "Камаз",
-    "carType": "Грузовые",
+    "title": "Kamaz",
+    "carType": "Truck",
     "location": {
       "locationString": "Moscow, Russia",
       "latitude": 55.712613450961044,
@@ -85,14 +85,14 @@
     },
     "photo": "https://www.autostat.ru/application/includes/blocks/big_photo/images/cache/000/092/715/7d7f818f-670-0.jpg",
     "driver": {
-      "name": "Иванов И.И.",
-      "phone": "+1234678901"
+      "name": "Bon Jovi",
+      "phone": "+790003007858"
     }
   },
   {
     "id": 7,
-    "title": "Газель",
-    "carType": "Грузовые",
+    "title": "Gazelle",
+    "carType": "Truck",
     "location": {
       "locationString": "Moscow, Russia",
       "latitude": 55.684293722008476,
@@ -100,14 +100,14 @@
     },
     "photo": "https://www.avtovzglyad.ru/media/article/AZZZZZ.jpg.740x555_q85_box-82%2C0%2C741%2C495_crop_detail_upscale.jpg",
     "driver": {
-      "name": "Иванов И.И.",
-      "phone": "+1234678901"
+      "name": "Bon Jovi",
+      "phone": "+790003007858"
     }
   },
   {
     "id": 8,
-    "title": "Полицейская Машина",
-    "carType": "Специальные",
+    "title": "Police Car",
+    "carType": "Service",
     "location": {
       "locationString": "Moscow, Russia",
       "latitude": 55.740196163951346,
@@ -115,14 +115,14 @@
     },
     "photo": "https://dic.academic.ru/pictures/wiki/files/82/Russian_Police_car_Tver.jpg",
     "driver": {
-      "name": "Иванов И.И.",
-      "phone": "+1234678901"
+      "name": "Bon Jovi",
+      "phone": "+790003007858"
     }
   },
   {
     "id": 9,
     "title": "Iveco",
-    "carType": "Специальные",
+    "carType": "Service",
     "location": {
       "locationString": "Moscow, Russia",
       "latitude": 55.78100751525643,
@@ -130,14 +130,14 @@
     },
     "photo": "https://images.techinsider.ru/upload/img_cache/79f/79f393a91234d67dc2833a2ed3809946_ce_1920x1280x0x0.jpg",
     "driver": {
-      "name": "Иванов И.И.",
-      "phone": "+1234678901"
+      "name": "Bon Jovi",
+      "phone": "+790003007858"
     }
   },
   {
     "id": 10,
-    "title": "Трактор МТЗ",
-    "carType": "Специальные",
+    "title": "Еractor MTZ",
+    "carType": "Service",
     "location": {
       "locationString": "Moscow, Russia",
       "latitude": 55.77138172079102,
@@ -145,8 +145,8 @@
     },
     "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Massey_Ferguson_6490_Dynashift.jpg/1200px-Massey_Ferguson_6490_Dynashift.jpg",
     "driver": {
-      "name": "Иванов И.И.",
-      "phone": "+1234678901"
+      "name": "Bon Jovi",
+      "phone": "+790003007858"
     }
   }
 ]

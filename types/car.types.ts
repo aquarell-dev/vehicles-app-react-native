@@ -1,4 +1,4 @@
-export const vehicleTypes = ['Грузовые', 'Легковые', 'Специальные'] as const
+export const vehicleTypes = ['Truck', 'Passenger', 'Service'] as const
 
 export type TVehicleType = keyof typeof vehicleTypes
 
