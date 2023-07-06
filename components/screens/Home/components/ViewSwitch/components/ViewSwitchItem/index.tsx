@@ -1,39 +1,55 @@
 import { FC, ReactNode } from 'react'
-import { Pressable, PressableProps, Text, TextProps } from 'react-native'
+import { Pressable, PressableProps, Text } from 'react-native'
 import { styled } from 'nativewind'
-import { classnames } from '../../../../../../../utils'
+import clsx from 'clsx'
+import constants from '../../../../../../../app.constants'
 
 type ViewSwitchItemProps = {
 	icon: ReactNode
 	text: string
-	pressableStyle?: TextProps['style']
-	textStyle?: TextProps['style']
+	pressableStyle?: string
+	textStyle?: string
 	active: boolean
 } & PressableProps
 
-const ViewSwitchItem: FC<ViewSwitchItemProps> = ({
-	                                                 icon,
-	                                                 text,
-	                                                 textStyle,
-	                                                 style,
-	                                                 className,
-	                                                 pressableStyle,
-	                                                 active,
-	                                                 ...props
-                                                 }) => {
+const ViewSwitchItem: FC<ViewSwitchItemProps> = props => {
+	const {
+		icon,
+		text,
+		textStyle,
+		style,
+		className,
+		pressableStyle,
+		active,
+		...rest
+	} = props
+	
+	const pressableClasses = clsx(
+		'w-1/2 py-2 px-4 flex flex-row items-center justify-center space-x-2',
+		pressableStyle
+	)
+	
+	const textClasses = clsx(
+		'text-center text-lg',
+		textStyle
+	)
+	
 	return (
 		<Pressable
-			style={pressableStyle}
-			className={classnames(
-				'w-1/2 py-2 px-4 border border-slate-200 flex flex-row items-center justify-center space-x-2',
-				active ? 'bg-background-secondary' : 'bg-white'
-			)}
-			{...props}
+			className={pressableClasses}
+			{...rest}
+			style={{
+				backgroundColor: !active ?
+					constants.colors.background.primary :
+					constants.colors.background.secondary
+			}}
 		>
 			{icon}
 			<Text
-				className='text-center text-lg'
-				style={textStyle}
+				className={textClasses}
+				style={{
+					color: constants.colors.text.primary
+				}}
 			>
 				{text}
 			</Text>
@@ -41,4 +57,9 @@ const ViewSwitchItem: FC<ViewSwitchItemProps> = ({
 	)
 }
 
-export default styled(ViewSwitchItem, { props: { textStyle: true, pressableStyle: true } })
+export default styled(ViewSwitchItem, {
+	props: {
+		textStyle: true,
+		pressableStyle: true
+	}
+})
