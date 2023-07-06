@@ -5,9 +5,18 @@ Just an example of an app built with React Native
 ## Features
 
 - Localization
+    - English
+    - Russian
 - Native Map
 - Optimized Lists
 - Deep Links
+- Store(Redux Toolkit)
+
+## What's coming next?
+
+- Dark and Light theme
+- Real back-end or at least Firebase
+- More Languages
 
 ## Design Inspiration
 
