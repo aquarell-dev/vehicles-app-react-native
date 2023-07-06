@@ -1,36 +1,35 @@
 import 'react-native-gesture-handler'
-import { FC, useCallback } from 'react'
+import { FC } from 'react'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { StatusBar } from 'expo-status-bar'
-import Navigation from './components/Navigators/Navigation'
-import { useFonts } from 'expo-font'
+
+import Navigation from './src/components/Navigators/Navigation'
+
 import * as SplashScreen from 'expo-splash-screen'
-import useTranslation from './hooks/useTranslation'
+
+import { Provider } from 'react-redux'
+import { store } from './src/store/store'
+
+import './src/i18n/i18n.config'
+import useCustomFonts from './src/hooks/useCustomFonts'
 
 SplashScreen.preventAutoHideAsync()
 
 const App: FC = () => {
-	const [fontsLoaded] = useFonts({
-		'MontserratAlt1': require('./assets/fonts/brand-name/MontserratAlt1-SemiBold.otf'),
-	})
+	const {
+		fontsLoaded,
+		onLayoutRootView
+	} = useCustomFonts()
 	
-	useTranslation()
-	
-	const onLayoutRootView = useCallback(async () => {
-		if (fontsLoaded) {
-			await SplashScreen.hideAsync()
-		}
-	}, [fontsLoaded])
-	
-	if (!fontsLoaded) {
-		return <></>
-	}
+	if (!fontsLoaded) return <></>
 	
 	return (
-		<SafeAreaProvider onLayout={onLayoutRootView}>
-			<StatusBar style='light' />
-			<Navigation />
-		</SafeAreaProvider>
+		<Provider store={store}>
+			<SafeAreaProvider onLayout={onLayoutRootView}>
+				<StatusBar style='light' />
+				<Navigation />
+			</SafeAreaProvider>
+		</Provider>
 	)
 }
 
