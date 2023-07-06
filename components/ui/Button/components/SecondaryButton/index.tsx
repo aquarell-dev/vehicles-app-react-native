@@ -1,10 +1,21 @@
 import { FC } from 'react'
 import { TButton } from '../../button.types'
 import Button from '../Button'
+import constants from '../../../../../app.constants'
 
-const SecondaryButton: FC<TButton> = ({ children, ...props }) => {
+const SecondaryButton: FC<TButton> = props => {
+	const {
+		children,
+		...rest
+	} = props
+	
 	return (
-		<Button textStyle='bg-button-secondary px-4 py-2' {...props}>
+		<Button
+			{...rest}
+			style={{
+				backgroundColor: constants.colors.button.secondary
+			}}
+		>
 			{children}
 		</Button>
 	)

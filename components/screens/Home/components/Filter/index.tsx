@@ -2,8 +2,12 @@ import { FC } from 'react'
 import { FlatList, Text } from 'react-native'
 import { SecondaryButton } from '../../../../ui/Button'
 import { FilterCarsByType, TVehicleType, vehicleTypes } from '../../../../../types/car.types'
+import constants from '../../../../../app.constants'
+import useTranslation from '../../../../../hooks/useTranslation'
 
 const Filter: FC<{ filterCallback: FilterCarsByType }> = ({ filterCallback }) => {
+	const { i18n } = useTranslation()
+	
 	return (
 		<>
 			<FlatList
@@ -18,13 +22,29 @@ const Filter: FC<{ filterCallback: FilterCarsByType }> = ({ filterCallback }) =>
 							key={t.index}
 							onPress={() => filterCallback(t.item as TVehicleType)}
 						>
-							<Text className='text-button-primary font-medium'>{t.item}</Text>
+							<Text
+								className='font-medium'
+								style={{
+									color: constants.colors.text.primary
+								}}
+							>
+								{t.item}</Text>
 						</SecondaryButton>
 				)}
-				contentContainerStyle={{ flex: 1, justifyContent: 'space-around', alignItems: 'stretch' }}
+				contentContainerStyle={{
+					flex: 1,
+					justifyContent: 'space-around',
+					alignItems: 'stretch'
+				}}
 			/>
 			<SecondaryButton onPress={() => filterCallback()}>
-				<Text className='text-button-primary font-medium'>Убрать Все Фильтры</Text>
+				<Text
+					className='font-medium'
+					style={{
+						color: constants.colors.text.primary
+					}}>
+					{i18n.t('home.clearFilter')}
+				</Text>
 			</SecondaryButton>
 		</>
 	)
