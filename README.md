@@ -11,6 +11,7 @@ Just an example of an app built with React Native
 - Optimized Lists
 - Deep Links
 - Store(Redux Toolkit)
+- Async Storage
 
 ## What's coming next?
 
