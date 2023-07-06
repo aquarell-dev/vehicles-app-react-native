@@ -11,7 +11,7 @@ const HomeNavigation: FC = () => {
 		<Stack.Navigator initialRouteName='HomePage' screenOptions={{ headerShown: false }}>
 			<Stack.Screen name='HomePage' component={Home} />
 			<Stack.Screen name='Car'>
-				{props => <Car {...props} car={props.route.params.car} />}
+				{props => <Car {...props} />}
 			</Stack.Screen>
 		</Stack.Navigator>
 	)
