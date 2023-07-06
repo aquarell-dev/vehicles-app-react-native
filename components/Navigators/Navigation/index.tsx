@@ -4,15 +4,45 @@ import { createDrawerNavigator } from '@react-navigation/drawer'
 import HomeNavigation from '../HomeNavigation'
 import { NavigationContainer } from '@react-navigation/native'
 import { RootDrawerParamList } from './navigation.types'
+import Sidebar from '../../ui/Sidebar'
+import { Ionicons } from '@expo/vector-icons'
+import constants from '../../../app.constants'
+import useTranslation from '../../../hooks/useTranslation'
 
 const Drawer = createDrawerNavigator<RootDrawerParamList>()
 
 const Navigation: FC = () => {
+	const { i18n } = useTranslation()
+	
 	return (
 		<NavigationContainer>
-			<Drawer.Navigator initialRouteName='Home' screenOptions={{ headerShown: false }}>
-				<Drawer.Screen name='Home' component={HomeNavigation} />
-				<Drawer.Screen name='Settings' component={Settings} />
+			<Drawer.Navigator
+				drawerContent={props => <Sidebar {...props} />}
+				initialRouteName='Home'
+				screenOptions={{
+					headerShown: false,
+					drawerLabelStyle: { marginLeft: -25 },
+					drawerActiveBackgroundColor: constants.colors.button.primary,
+					drawerActiveTintColor: constants.colors.text.primary,
+					drawerInactiveTintColor: constants.colors.text.secondary,
+				}}
+			>
+				<Drawer.Screen
+					name='Home'
+					component={HomeNavigation}
+					options={{
+						title: i18n.t('sidebar.home'),
+						drawerIcon: ({ color }) => <Ionicons name='home-outline' size={24} color={color} />
+					}}
+				/>
+				<Drawer.Screen
+					name='Settings'
+					component={Settings}
+					options={{
+						title: i18n.t('sidebar.settings'),
+						drawerIcon: ({ color }) => <Ionicons name='settings-outline' size={24} color={color} />
+					}}
+				/>
 			</Drawer.Navigator>
 		</NavigationContainer>
 	)
